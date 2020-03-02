@@ -8,21 +8,21 @@ import './App.css';
 
 
 class App extends Component {
-  state = { 
+  state = {
     currentUser: localStorage.getItem('uid')
   };
 
   setCurrentUser = userId => {
-    this.setState({currentUser: userId});
+    this.setState({ currentUser: userId });
   };
 
   logout = () => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/auth/logout`, {withCredentials: true})
+      .delete(`${process.env.REACT_APP_API_URL}/auth/logout`, { withCredentials: true })
       .then(res => {
         console.log(res);
         localStorage.removeItem('uid');
-        this.setState({currentUser: null});
+        this.setState({ currentUser: null });
         this.props.history.push('/login');
       })
       .catch(err => {
