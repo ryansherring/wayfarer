@@ -6,7 +6,7 @@ const Navbar = props => {
       <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
         <div className='container'>
           <Link className='navbar-brand' to='/'>
-            Auth App
+            Project Wayfarer
           </Link>
           <button
             className='navbar-toggler'
