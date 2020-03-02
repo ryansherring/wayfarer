@@ -22,7 +22,7 @@ class Register extends Component {
       handleSubmit = event => {
         event.preventDefault()
         console.log(this.state)
-        axios.post(`${process.env.REACT_APP_API_URL}/register`, this.state)
+        axios.post(`${process.env.REACT_APP_API_URL}/signup`, this.state)
         .then(res => {
           console.log(res);
         this.props.history.push('/login');
@@ -86,6 +86,17 @@ class Register extends Component {
                             id='password2'
                             name='password2'
                             value={this.state.password2}
+                          />
+                        </Form.Field>
+                        <Form.Field>
+                          <label htmlFor='homeCity'>Home City</label>
+                          <input
+                            onChange={this.handleChange}
+                            className='form-control form-control-lg'
+                            type='text'
+                            id='homeCity'
+                            name='homeCity'
+                            value={this.state.homeCity}
                           />
                         </Form.Field>
                       </Form> 
