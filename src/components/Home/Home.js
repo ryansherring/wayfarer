@@ -1,7 +1,7 @@
 import React from 'react';
-import Carousel from 'semantic-ui-carousel-react';
-import { Image, Container } from 'semantic-ui-react';
 import './Home.css'
+import Carousel from 'semantic-ui-carousel-react';
+import { Image, Container, Segment, Header, Grid, Placeholder } from 'semantic-ui-react';
 import neworleans from './new-orleans.jpg';
 import paris from './paris.jpg';
 
@@ -29,22 +29,75 @@ const Home = () => {
     },
   ]
 
-  // const styles = {
-  //   height: '900px'
-  // }
+  const styles = {
+    backgroundColor: "#1A1A1B"
+  }
   return (
-    <Container
-    // style={styles}
+    <Container inverted
+      style={styles}
     >
-      <Carousel
+      <Segment inverted>
+        <Carousel
+          style={styles}
+          elements={elements}
+          duration={3000}
+          animation='slide left'
+          showNextPrev={false}
+          showIndicators={true}
+        />
+      </Segment>
+      <Segment inverted>
+        <Header as='h2' textAlign='centered'>Wayfarer is...</Header>
+        <Grid columns={3} divided inverted>
+          <Grid.Row>
+            <Grid.Column>
+              <Placeholder>
+                <Placeholder.Header>
+                  <Placeholder.Line />
+                </Placeholder.Header>
+                <Placeholder.Paragraph>
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                </Placeholder.Paragraph>
+              </Placeholder>
+            </Grid.Column>
+            <Grid.Column>
+              <Placeholder>
+                <Placeholder.Header>
+                  <Placeholder.Line />
+                </Placeholder.Header>
+                <Placeholder.Paragraph>
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                </Placeholder.Paragraph>
+              </Placeholder>
+            </Grid.Column>
+            <Grid.Column>
+              <Placeholder>
+                <Placeholder.Header>
+                  <Placeholder.Line />
+                </Placeholder.Header>
+                <Placeholder.Paragraph>
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                  <Placeholder.Line />
+                </Placeholder.Paragraph>
+              </Placeholder>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Segment>
 
-        elements={elements}
-        duration={3000}
-        animation='slide left'
-        showNextPrev={false}
-        showIndicators={true}
-      />
     </Container>
+
   )
 
 }

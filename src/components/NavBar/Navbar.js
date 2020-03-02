@@ -14,7 +14,7 @@ export default class MenuExampleBasic extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu>
+      <Menu inverted>
         <Menu.Item header>Wayfarer</Menu.Item>
         <Menu.Menu position='right'>
           <div className='ui right aligned category search item'>
