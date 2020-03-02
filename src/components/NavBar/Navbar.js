@@ -1,61 +1,66 @@
-import React from 'react';
+import React, { Component } from 'react'
 import { NavLink, Link } from 'react-router-dom';
+import { Menu } from 'semantic-ui-react';
 
-const Navbar = props => {
+export default class MenuExampleBasic extends Component {
+  state = {
+    // sets default active item
+    activeItem: 'profile'
+  }
+  // passes props to the navbar - e=event
+  handleItemClick = (e, props) => this.setState({ activeItem: props.name })
+
+  render() {
+    const { activeItem } = this.state
+
     return (
-      <nav className='navbar navbar-expand-md navbar-dark bg-dark'>
-        <div className='container'>
-          <Link className='navbar-brand' to='/'>
-            Project Wayfarer
-          </Link>
-          {/* <button
-            className='navbar-toggler'
-            type='button'
-            data-toggle='collapse'
-            data-target='#navbarsExample04'
-            aria-controls='navbarsExample04'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-          >
-          </button> */}
-  
-          <div className='collapse navbar-collapse' id='navbarsExample04'>
-            <ul className='navbar-nav ml-auto'>
-              <li className='nav-item'>
-                <NavLink className='nav-link' exact to='/'>
-                  Home
-                </NavLink>
-              </li>
-              {props.currentUser ? (
-                <>
-                  <li className='nav-item'>
-                    <NavLink className='nav-link' to='/profile'>
-                      Profile
-                    </NavLink>
-                  </li>
-                  {/* <li onClick={props.logout} className='nav-item'>
-                    <button className=' btn btn-danger'>Logout</button>
-                  </li> */}
-                </>
-              ) : (
-                <>
-                  <li className='nav-item'>
-                    <NavLink className='nav-link' to='/register'>
-                      Register
-                    </NavLink>
-                  </li>
-                  <li className='nav-item'>
-                    <NavLink className='nav-link' to='/login'>
-                      Login
-                    </NavLink>
-                  </li>
-                </>
-              )}
-            </ul>
+      <Menu>
+        <Menu.Item header>Wayfarer</Menu.Item>
+        <Menu.Menu position='right'>
+          <div className='ui right aligned category search item'>
+            <div className='ui transparent icon input'>
+              <input
+                className='prompt'
+                type='text'
+                placeholder='Search cities...'
+              />
+              <i className='search link icon' />
+            </div>
+            <div className='results' />
           </div>
-        </div>
-      </nav>
-    );
-};
+          <Menu.Item
+            name='signup'
+            active={activeItem === 'signup'}
+            onClick={this.handleItemClick}
+          >
+            <Link to='/signup'>Signup</Link>
+          </Menu.Item>
 
-export default Navbar;
+          <Menu.Item
+            name='login'
+            active={activeItem === 'login'}
+            onClick={this.handleItemClick}
+          >
+            <Link to='/login'>Login</Link>
+          </Menu.Item>
+
+
+          <Menu.Item
+            name='profile'
+            active={activeItem === 'profile'}
+            onClick={this.handleItemClick}
+          >
+            <Link to='/profile'>Profile</Link>
+          </Menu.Item>
+          <Menu.Item
+            name='logout'
+            active={activeItem === 'logout'}
+            onClick={this.handleItemClick}
+          >
+            <Link to='#'>Logout</Link>
+          </Menu.Item>
+        </Menu.Menu>
+      </Menu>
+    )
+  }
+}
