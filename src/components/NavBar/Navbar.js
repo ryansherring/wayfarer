@@ -1,8 +1,11 @@
 import React, { Component } from 'react'
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
+import Register from './Modal/Modal';
+import Login from './Modal/ModalLogin';
 
-export default class MenuExampleBasic extends Component {
+
+class MenuExampleBasic extends Component {
   state = {
     // sets default active item
     activeItem: 'profile'
@@ -10,12 +13,13 @@ export default class MenuExampleBasic extends Component {
   // passes props to the navbar - e=event
   handleItemClick = (e, props) => this.setState({ activeItem: props.name })
 
+  
   render() {
     const { activeItem } = this.state
 
     return (
       <Menu>
-        <Menu.Item header>Wayfarer</Menu.Item>
+        <Menu.Item header><Link to='/'>Wayfarer</Link></Menu.Item>
         <Menu.Menu position='right'>
           <div className='ui right aligned category search item'>
             <div className='ui transparent icon input'>
@@ -28,20 +32,12 @@ export default class MenuExampleBasic extends Component {
             </div>
             <div className='results' />
           </div>
-          <Menu.Item
-            name='signup'
-            active={activeItem === 'signup'}
-            onClick={this.handleItemClick}
-          >
-            <Link to='/signup'>Signup</Link>
+          <Menu.Item>
+            < Register />
           </Menu.Item>
 
-          <Menu.Item
-            name='login'
-            active={activeItem === 'login'}
-            onClick={this.handleItemClick}
-          >
-            <Link to='/login'>Login</Link>
+          <Menu.Item>
+            < Login />
           </Menu.Item>
 
 
@@ -64,3 +60,5 @@ export default class MenuExampleBasic extends Component {
     )
   }
 }
+
+export default MenuExampleBasic
