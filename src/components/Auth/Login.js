@@ -9,14 +9,12 @@ class Login extends Component {
   };
 
   handleChange = event => {
-    // TODO handle input change
     this.setState({
       [event.target.name]: event.target.value
     });
   };
 
   handleSubmit = event => {
-    // TODO handle form submit
     event.preventDefault();
     axios
       .post(`${process.env.REACT_APP_API_URL}/auth/login`, this.state, {withCredentials: true})

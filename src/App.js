@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
 import Routes from './config/routes'
-import Navbar from './components/Navbar/Navbar'
+import Navbar from './components/NavBar/Navbar'
 import logo from './logo.svg';
 import './App.css';
 
