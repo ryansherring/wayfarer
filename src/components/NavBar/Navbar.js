@@ -8,7 +8,7 @@ const Navbar = props => {
           <Link className='navbar-brand' to='/'>
             Project Wayfarer
           </Link>
-          <button
+          {/* <button
             className='navbar-toggler'
             type='button'
             data-toggle='collapse'
@@ -17,8 +17,7 @@ const Navbar = props => {
             aria-expanded='false'
             aria-label='Toggle navigation'
           >
-            <span className='navbar-toggler-icon'></span>
-          </button>
+          </button> */}
   
           <div className='collapse navbar-collapse' id='navbarsExample04'>
             <ul className='navbar-nav ml-auto'>
@@ -34,9 +33,9 @@ const Navbar = props => {
                       Profile
                     </NavLink>
                   </li>
-                  <li onClick={props.logout} className='nav-item'>
+                  {/* <li onClick={props.logout} className='nav-item'>
                     <button className=' btn btn-danger'>Logout</button>
-                  </li>
+                  </li> */}
                 </>
               ) : (
                 <>
