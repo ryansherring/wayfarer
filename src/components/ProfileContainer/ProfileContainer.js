@@ -26,26 +26,18 @@ class ProfileContainer extends React.Component {
 			})
 	}
 
+	setProfileInfo = user => {
+		this.setState({
+			profile: user
+		});
+	}
+
 	toggleEditForm = () => {
 		this.setState(prevState => {
 			return {
 				showEditForm: !prevState.showEditForm
 			}
 		})
-	}
-
-	handleSubmit = (event) => {
-		event.preventDefault();
-
-		console.log(this.state);
-
-		// axios.put(`${process.env.REACT_APP_API_URL}/users/${userId}`, {withCredentials: true })
-		// 	.then(res => {
-		// 		console.log(res);
-		// 	})
-		// 	.catch(err => {
-		// 		console.log(err.response);
-		// 	});
 	}
 
 	render() {
@@ -57,7 +49,7 @@ class ProfileContainer extends React.Component {
 							profile={this.state.profile}
 						/>
 						{!this.state.showEditForm && <Button onClick={this.toggleEditForm}>Edit</Button>}
-						{this.state.showEditForm && <ProfileEditForm handleSubmit={this.handleSubmit}/>}
+						{this.state.showEditForm && <ProfileEditForm toggleEditForm={this.toggleEditForm} setProfileInfo={this.setProfileInfo} />}
 					</Grid.Column>
 					<Grid.Column width={12}>
 						{/* HERE IS WHERE PROFILE POSTS WOULD BE?????? */}
