@@ -13,7 +13,7 @@ class MenuExampleBasic extends Component {
   // passes props to the navbar - e=event
   handleItemClick = (e, props) => this.setState({ activeItem: props.name })
 
-  
+
   render() {
     const { activeItem } = this.state
 
