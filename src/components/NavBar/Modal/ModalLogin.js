@@ -10,7 +10,6 @@ class Login extends Component {
       email: '',
       password: '',
       show: false,
-      loggedIn: false
     };
   
     handleChange = event => {
@@ -25,7 +24,6 @@ class Login extends Component {
         .post(`${process.env.REACT_APP_API_URL}/login`, this.state, {withCredentials: true})
         .then(res => {
           console.log(res);
-          this.setState({loggedIn: true})
           this.close()
           this.props.setCurrentUser(res.data.data)
 
