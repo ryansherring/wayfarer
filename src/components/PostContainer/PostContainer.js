@@ -30,7 +30,7 @@ class PostContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Whazzzaaaaaaa</h1>;
+        <h1>Whazzzaaaaaaa</h1>
         {this.state.posts.length ? (
           this.displayPosts(this.state.posts)
         ) : (
