@@ -17,12 +17,12 @@ class App extends Component {
 
   logout = () => {
     axios
-      .delete(`${process.env.REACT_APP_API_URL}/auth/logout`, { withCredentials: true })
+      .delete(`${process.env.REACT_APP_API_URL}/logout`, { withCredentials: true })
       .then(res => {
         console.log(res);
         localStorage.removeItem('uid');
         this.setState({ currentUser: null });
-        this.props.history.push('/login');
+        this.props.history.push('/');
       })
       .catch(err => {
         console.log(err);

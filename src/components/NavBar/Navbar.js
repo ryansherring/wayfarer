@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import Register from './Modal/ModalRegister';
 import Login from './Modal/ModalLogin';
+import App from '../../App'
 
 
 class MenuExampleBasic extends Component {
@@ -14,49 +15,31 @@ class MenuExampleBasic extends Component {
   handleItemClick = (e, props) => this.setState({ activeItem: props.name })
 
 
-  render() {
+  render = props => {
     const { activeItem } = this.state
-
     return (
       <Menu>
         <Menu.Item header><Link to='/'>Wayfarer</Link></Menu.Item>
         <Menu.Menu position='right'>
-          <div className='ui right aligned category search item'>
-            <div className='ui transparent icon input'>
-              <input
-                className='prompt'
-                type='text'
-                placeholder='Search cities...'
-              />
-              <i className='search link icon' />
-            </div>
-            <div className='results' />
-          </div>
-          <Menu.Item>
-            < Register />
-          </Menu.Item>
+            <>
+            <Menu.Item>
+              < Register />
+            </Menu.Item>
 
-          <Menu.Item>
-            < Login />
-          </Menu.Item>
-
-
-          <Menu.Item
-            name='profile'
-            active={activeItem === 'profile'}
-            onClick={this.handleItemClick}
-          >
-            <Link to='/profile'>Profile</Link>
-          </Menu.Item>
+            <Menu.Item>
+              < Login />
+            </Menu.Item>
+            </>
           <Menu.Item
             name='logout'
             active={activeItem === 'logout'}
             onClick={this.handleItemClick}
           >
-            <Link to='#'>Logout</Link>
+            
           </Menu.Item>
         </Menu.Menu>
       </Menu>
+      
     )
   }
 }
