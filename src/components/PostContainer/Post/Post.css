@@ -1,0 +1,25 @@
+.post-card {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  background-color: teal;
+  width: 500px;
+  height: 100px;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-thumbnail {
+  height: 100px;
+  width: 100px;
+}
+.post-body {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
