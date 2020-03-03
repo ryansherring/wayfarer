@@ -13,7 +13,7 @@ class PostContainer extends React.Component {
     this.setState({ posts: postSeed });
   }
 
-  displayTop() {}
+  displayTop() { }
 
   displayPosts = posts => {
     return posts.map(post => {
@@ -37,10 +37,10 @@ class PostContainer extends React.Component {
         {this.state.posts.length ? (
           this.displayPosts(this.state.posts)
         ) : (
-          <h1>No Posts Yet!</h1>
-        )}
+            <h1>No Posts Yet!</h1>
+          )}
         <Post />
-      </div>
+      </div >
     );
   }
 }
