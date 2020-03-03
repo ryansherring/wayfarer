@@ -14,13 +14,17 @@ class MenuExampleBasic extends Component {
   // passes props to the navbar - e=event
   handleItemClick = (e, props) => this.setState({ activeItem: props.name })
 
-
   render = props => {
+    console.log(this.props)
     const { activeItem } = this.state
     return (
       <Menu>
         <Menu.Item header><Link to='/'>Wayfarer</Link></Menu.Item>
         <Menu.Menu position='right'>
+          
+          {this.props.currentUser ? (
+        <>
+
           <div className='ui right aligned category search item'>
             <div className='ui transparent icon input'>
               <input
@@ -32,14 +36,6 @@ class MenuExampleBasic extends Component {
             </div>
             <div className='results' />
           </div>
-          <Menu.Item>
-            < Register />
-          </Menu.Item>
-
-          <Menu.Item>
-            < Login setCurrentUser={this.props.setCurrentUser}/>
-          </Menu.Item>
-
 
           <Menu.Item
             name='profile'
@@ -48,18 +44,34 @@ class MenuExampleBasic extends Component {
           >
             <Link to='/profile'>Profile</Link>
           </Menu.Item>
+        
           <Menu.Item
             name='logout'
             active={activeItem === 'logout'}
-            onClick={this.handleItemClick}
+            onClick={this.props.logout}
           >
             
+            
           </Menu.Item>
+        </>
+          ) : (
+        <>
+
+          <Menu.Item>
+            < Register />
+          </Menu.Item>
+
+          <Menu.Item>
+            < Login setCurrentUser={this.props.setCurrentUser}/>
+          </Menu.Item>
+
+        </>
+          )}
+
         </Menu.Menu>
       </Menu>
       
     )
   }
 }
-
 export default MenuExampleBasic
