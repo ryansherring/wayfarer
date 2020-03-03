@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Grid } from 'semantic-ui-react';
+import PostContainer from '../PostContainer/PostContainer';
 
 const CitiesView = () => {
   return (
@@ -14,6 +15,7 @@ const CitiesView = () => {
         <Grid.Row>
           <Header as='h1' inverted>City Detail Container</Header>
           {/* future space for City Detail Container */}
+          <PostContainer />
         </Grid.Row>
       </Grid.Column>
     </Grid>

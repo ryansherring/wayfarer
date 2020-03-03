@@ -3,6 +3,7 @@ import { Container, Header, Grid } from 'semantic-ui-react';
 import api from './posts.json';
 import Post from './Post/Post';
 
+
 class CitiesList extends React.Component {
   state = {
     posts: [],
