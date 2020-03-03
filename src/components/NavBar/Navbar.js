@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
-import Register from './Modal/Modal';
+import Register from './Modal/ModalRegister';
 import Login from './Modal/ModalLogin';
 
 
