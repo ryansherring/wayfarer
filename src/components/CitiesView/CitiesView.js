@@ -13,18 +13,6 @@ const CitiesView = () => {
       </Grid.Column>
       <Grid.Column width={10}>
         <Grid.Row>
-          <Grid columns={2}>
-            <Grid.Column color='yellow'>
-              <Grid.Row>
-                <Header as='h1' inverted>City Name</Header>
-              </Grid.Row>
-            </Grid.Column>
-            <Grid.Column color='blue'>
-              <Grid.Row>
-                <Header as='h1' inverted>City Image</Header>
-              </Grid.Row>
-            </Grid.Column>
-          </Grid>
           <PostContainer />
         </Grid.Row>
       </Grid.Column>
