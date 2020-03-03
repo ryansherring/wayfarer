@@ -4,13 +4,16 @@ import postSeed from "./postSeed.json";
 
 class PostContainer extends React.Component {
   state = {
-    posts: []
+    posts: [],
+    context: "cities"
   };
 
   componentDidMount() {
-    console.log("PostContainer Rendered");
+    console.log("PostContainer Mounted");
     this.setState({ posts: postSeed });
   }
+
+  displayTop() {}
 
   displayPosts = posts => {
     return posts.map(post => {

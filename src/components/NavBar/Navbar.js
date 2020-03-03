@@ -37,7 +37,7 @@ class MenuExampleBasic extends Component {
           </Menu.Item>
 
           <Menu.Item>
-            < Login />
+            < Login setCurrentUser={this.props.setCurrentUser}/>
           </Menu.Item>
 
 

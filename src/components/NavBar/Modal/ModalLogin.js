@@ -25,7 +25,7 @@ class Login extends Component {
         .then(res => {
           console.log(res);
           this.close()
-        //   this.props.setCurrentUser(res.data.data)
+          this.props.setCurrentUser(res.data.data)
 
         })
         .catch(err => {
