@@ -2,16 +2,18 @@ import React from "react";
 import Post from "./Post/Post";
 import postSeed from "./postSeed.json";
 
-
 class PostContainer extends React.Component {
   state = {
-    posts: []
+    posts: [],
+    context: "cities"
   };
 
   componentDidMount() {
-    console.log("PostContainer Rendered");
+    console.log("PostContainer Mounted");
     this.setState({ posts: postSeed });
   }
+
+  displayTop() { }
 
   displayPosts = posts => {
     return posts.map(post => {
@@ -31,17 +33,16 @@ class PostContainer extends React.Component {
   render() {
     return (
       <div>
-        <h1>Whazzzaaaaaaa</h1>;
+        <h1>Whazzzaaaaaaa</h1>
         {this.state.posts.length ? (
           this.displayPosts(this.state.posts)
         ) : (
             <h1>No Posts Yet!</h1>
           )}
         <Post />
-      </div>
+      </div >
     );
   }
 }
-
 
 export default PostContainer;
