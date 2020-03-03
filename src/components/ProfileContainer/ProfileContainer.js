@@ -2,7 +2,7 @@ import React from 'react';
 import Profile from '../../components/Profile/Profile';
 import ProfileEditForm from '../../components/ProfileEditForm/ProfileEditForm';
 
-import { Grid } from 'semantic-ui-react';
+import { Grid, Button } from 'semantic-ui-react';
 import axios from 'axios';
 
 class ProfileContainer extends React.Component {
@@ -17,6 +17,9 @@ class ProfileContainer extends React.Component {
 		axios.get(`${process.env.REACT_APP_API_URL}/users/${userId}`, { withCredentials: true })
 			.then(res => {
 				console.log(res);
+				this.setState({
+					profile: res.data.data
+				})
 			})
 			.catch(err => {
 				console.log(err.response);
@@ -53,7 +56,7 @@ class ProfileContainer extends React.Component {
 						<Profile
 							profile={this.state.profile}
 						/>
-						{!this.state.showEditForm && <button onClick={this.toggleEditForm}>Edit</button>}
+						{!this.state.showEditForm && <Button onClick={this.toggleEditForm}>Edit</Button>}
 						{this.state.showEditForm && <ProfileEditForm handleSubmit={this.handleSubmit}/>}
 					</Grid.Column>
 					<Grid.Column width={12}>
