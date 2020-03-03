@@ -8,7 +8,8 @@ import { render } from '@testing-library/react';
 class Login extends Component {
     state = {
       email: '',
-      password: ''
+      password: '',
+      show: false
     };
   
     handleChange = event => {
@@ -23,17 +24,28 @@ class Login extends Component {
         .post(`${process.env.REACT_APP_API_URL}/login`, this.state, {withCredentials: true})
         .then(res => {
           console.log(res);
-          this.props.setCurrentUser(res.data.data)
-          this.props.history.push('/');
+          this.close()
+        //   this.props.setCurrentUser(res.data.data)
+
         })
         .catch(err => {
           console.log(err);
         })
     };
 
+    open =() => {
+        this.setState({show:true})
+    }
+
+    close =() => {
+        this.setState({show:false})
+    }
+
     render(){
         return(
-            <Modal trigger={<Button> Log In!</Button>}>
+            <>
+            <Button onClick={this.open}> Log In!</Button>
+            <Modal open={this.state.show} onClose={this.close}>
             <Modal.Header>Log In!</Modal.Header>
             <Modal.Content Form>
               <Modal.Description>
@@ -77,6 +89,7 @@ class Login extends Component {
               </button>
             </Modal.Actions>
           </Modal>
+          </>
         );
         }
     }

@@ -10,7 +10,8 @@ class Register extends Component {
       name: '',
       email: '',
       password: '',
-      password2: ''
+      password2: '',
+      show: false
     };
   
     handleChange = event => {
@@ -25,15 +26,26 @@ class Register extends Component {
         axios.post(`${process.env.REACT_APP_API_URL}/signup`, this.state)
         .then(res => {
           console.log(res);
+          this.close()
         this.props.history.push('/login');
         }).catch(err => {
           console.log(err.response);
         }); // on submit
       };
 
+      open =() => {
+        this.setState({show:true})
+    }
+
+      close =() => {
+        this.setState({show:false})
+      }
+
       render(){
         return(
-            <Modal trigger={<Button>Sign Up</Button>}>
+          <>
+            <Button onClick={this.open}> Sign Up!</Button>
+            <Modal open={this.state.show} onClose={this.close}>
             <Modal.Header>Register!</Modal.Header>
             <Modal.Content Form>
               <Modal.Description>
@@ -110,6 +122,7 @@ class Register extends Component {
               </button>
             </Modal.Actions>
           </Modal>
+          </>
         );
         }
     }
