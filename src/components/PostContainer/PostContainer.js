@@ -44,6 +44,7 @@ class PostContainer extends React.Component {
 
   render() {
     return (
+<<<<<<< HEAD
       <section className="post-container">
         {this.displayTop()}
         <div className="title">
@@ -58,6 +59,17 @@ class PostContainer extends React.Component {
           )}
         </div>
       </section>
+=======
+      <div>
+        <h1>Whazzzaaaaaaa</h1>
+        {this.state.posts.length ? (
+          this.displayPosts(this.state.posts)
+        ) : (
+            <h1>No Posts Yet!</h1>
+          )}
+        <Post />
+      </div >
+>>>>>>> submaster
     );
   }
 }
