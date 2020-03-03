@@ -1,10 +1,46 @@
+.post-container {
+  /* background-color: salmon; */
+  box-sizing: border-box;
+  height: 800px;
+  /* padding: 0px 20px; */
+}
+.container-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 10px;
+  height: 30%;
+}
+.ct-title h1 {
+  margin: 0px;
+}
+.ct-title h2 {
+  margin: 0px;
+}
+.splash {
+  height: 100%;
+}
+.title {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+}
+.post-scroll {
+  height: 60%;
+  overflow: scroll;
+}
 .post-card {
+  padding: 10px;
   display: flex;
   flex-direction: row;
+  border-radius: 25px;
+  overflow: hidden;
   margin: 10px;
-  background-color: teal;
-  width: 500px;
-  height: 100px;
+  background-color: rgba(10, 10, 10, 0.8);
+  width: 97.5%;
+  height: 150px;
 }
 .post-header {
   display: flex;
@@ -13,13 +49,13 @@
 }
 
 .post-thumbnail {
-  height: 100px;
-  width: 100px;
+  height: 100%;
+  border-radius: 15px 0px 0px 15px;
 }
 .post-body {
   display: flex;
-  overflow: hidden;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 5px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 5px 10px;
+  margin-left: 10px;
 }
