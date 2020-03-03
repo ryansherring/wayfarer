@@ -1,6 +1,7 @@
 import React from "react";
 import Post from "./Post/Post";
 import postSeed from "./postSeed.json";
+import { Container, Header, Grid, GridColumn } from 'semantic-ui-react';
 
 class PostContainer extends React.Component {
   state = {
@@ -32,15 +33,17 @@ class PostContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Whazzzaaaaaaa</h1>
-        {this.state.posts.length ? (
-          this.displayPosts(this.state.posts)
-        ) : (
-            <h1>No Posts Yet!</h1>
-          )}
+      <Container>
+        <Header inverted as='h1'>Posts</Header>
+        {
+          this.state.posts.length ? (
+            this.displayPosts(this.state.posts)
+          ) : (
+              <h1>No Posts Yet!</h1>
+            )
+        }
         <Post />
-      </div >
+      </Container >
     );
   }
 }
