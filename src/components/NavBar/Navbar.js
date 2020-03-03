@@ -21,15 +21,33 @@ class MenuExampleBasic extends Component {
       <Menu>
         <Menu.Item header><Link to='/'>Wayfarer</Link></Menu.Item>
         <Menu.Menu position='right'>
-            <>
-            <Menu.Item>
-              < Register />
-            </Menu.Item>
+          <div className='ui right aligned category search item'>
+            <div className='ui transparent icon input'>
+              <input
+                className='prompt'
+                type='text'
+                placeholder='Search cities...'
+              />
+              <i className='search link icon' />
+            </div>
+            <div className='results' />
+          </div>
+          <Menu.Item>
+            < Register />
+          </Menu.Item>
 
-            <Menu.Item>
-              < Login />
-            </Menu.Item>
-            </>
+          <Menu.Item>
+            < Login setCurrentUser={this.props.setCurrentUser}/>
+          </Menu.Item>
+
+
+          <Menu.Item
+            name='profile'
+            active={activeItem === 'profile'}
+            onClick={this.handleItemClick}
+          >
+            <Link to='/profile'>Profile</Link>
+          </Menu.Item>
           <Menu.Item
             name='logout'
             active={activeItem === 'logout'}
