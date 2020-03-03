@@ -14,18 +14,11 @@ class ProfileEditForm extends React.Component {
 		})
 	}
 
-	handleSubmit = (event) => {
-		event.preventDefault();
-
-		console.log(this.state);
-
-	} 
-
 	render() {
 		return(
 			<>
 			<p>I am Profile Edit Form</p>
-			<Form onSubmit={this.handleSubmit}>
+			<Form onSubmit={this.props.handleSubmit}>
 				<Form.Field>
 					<label>Name</label>
 					<input 
