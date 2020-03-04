@@ -9,7 +9,7 @@ class PostContainer extends React.Component {
     posts: [],
     title: "London",
     subtitle: "England",
-    img: "https://i.imgur.com/TyrqyIb.jpg"
+    img: "https://i.imgur.com/q3VDpaP.jpg"
   };
 
   componentDidMount() {
