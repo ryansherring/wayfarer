@@ -4,6 +4,7 @@ import axios from "axios";
 import Routes from "./config/routes";
 import Navbar from "./components/NavBar/Navbar";
 import "./App.css";
+import { withRouter } from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -24,6 +25,7 @@ class App extends Component {
         console.log(res);
         this.setState({currentUser: null});
         localStorage.removeItem('uid');
+        this.props.history.push('/');
       })
       .catch(err => {
         console.log(err);
@@ -45,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
