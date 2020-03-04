@@ -54,30 +54,32 @@ class ProfileContainer extends React.Component {
 
 	render() {
 		return (
-			<Grid>
-				<Grid.Row>
-					<Grid.Column width={4}>
-						<Profile
-							profile={this.state.profile}
-						/>
-						{!this.state.showEditForm && <Button onClick={this.toggleEditForm}>Edit</Button>}
-						{this.state.showEditForm && <ProfileEditForm toggleEditForm={this.toggleEditForm} setProfileInfo={this.setProfileInfo} />}
-					</Grid.Column>
-					<Grid.Column width={12}>
-						{/* HERE IS WHERE PROFILE POSTS WOULD BE?????? */}
-						<section className="post-container">
-							<h2 style={{ textAlign: 'center' }}>{this.state.profile.name}'s Posts</h2>
-							<div className="post-scroll">
-								{this.state.posts.length ? (
-									this.displayPosts(this.state.posts)
-								) : (
-										<h1>No Posts Yet!</h1>
-									)}
-							</div>
-						</section>
-					</Grid.Column>
-				</Grid.Row>
-			</Grid>
+			<div className='profile-view'>
+				<Grid>
+					<Grid.Row>
+						<Grid.Column width={4}>
+							<Profile
+								profile={this.state.profile}
+							/>
+							{!this.state.showEditForm && <Button onClick={this.toggleEditForm}>Edit</Button>}
+							{this.state.showEditForm && <ProfileEditForm toggleEditForm={this.toggleEditForm} setProfileInfo={this.setProfileInfo} />}
+						</Grid.Column>
+						<Grid.Column width={12}>
+							{/* HERE IS WHERE PROFILE POSTS WOULD BE?????? */}
+							<section className="post-container">
+								<h2 style={{ textAlign: 'center' }}>{this.state.profile.name}'s Posts</h2>
+								<div className="post-scroll">
+									{this.state.posts.length ? (
+										this.displayPosts(this.state.posts)
+									) : (
+											<h1>No Posts Yet!</h1>
+										)}
+								</div>
+							</section>
+						</Grid.Column>
+					</Grid.Row>
+				</Grid>
+			</div>
 		)
 	}
 }

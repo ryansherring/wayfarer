@@ -1,3 +1,8 @@
 .post-container {
-	height: 1600px;
+	height: 1200px;
+}
+
+.profile-view {
+	height: 800px;
+	overflow: hidden;
 }
