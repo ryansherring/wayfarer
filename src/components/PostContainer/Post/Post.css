@@ -1,8 +1,6 @@
 .post-container {
-	/* background-color: salmon; */
-	box-sizing: border-box;
-	height: 900px;
-	/* padding: 0px 20px; */
+  box-sizing: border-box;
+  height: 800px;
 }
 .container-top {
 	display: flex;
@@ -21,26 +19,35 @@
 	height: 100%;
 }
 .title {
-	height: 10%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0px 10px;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 10px;
+  margin-top: 25px;
+  border-bottom: 1px rgba(255, 0, 0, 0.75) solid;
+}
+.title h1 {
+  margin: 0px;
+}
+.title button {
+  margin: 0px;
 }
 .post-scroll {
 	height: 60%;
 	overflow: scroll;
 }
 .post-card {
-	padding: 10px;
-	display: flex;
-	flex-direction: row;
-	border-radius: 25px;
-	overflow: hidden;
-	margin: 10px;
-	background-color: rgba(10, 10, 10, 0.8);
-	width: 97.5%;
-	height: 150px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 10px;
+  background-color: rgba(10, 10, 10, 0.8);
+  width: 97.5%;
+  height: 100px;
 }
 .post-header {
 	display: flex;
@@ -53,9 +60,16 @@
 	border-radius: 15px 0px 0px 15px;
 }
 .post-body {
-	display: flex;
-	flex-direction: column;
-	/* background-color: rgba(0, 0, 0, 0.5); */
-	padding: 5px 10px;
-	margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  padding: 5px 10px;
+  margin-left: 10px;
+  width: 200px;
+}
+.post-body p {
+  width: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
