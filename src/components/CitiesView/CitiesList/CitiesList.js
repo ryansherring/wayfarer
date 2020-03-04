@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Container, Header, Grid } from 'semantic-ui-react';
-import api from './posts.json';
-import Post from './Post/Post';
+import City from './City/City';
+import citySeed from './citySeed.json'
+import './CitiesList.css'
 
 
 class CitiesList extends React.Component {
@@ -12,38 +13,35 @@ class CitiesList extends React.Component {
 
   componentDidMount() {
     console.log('CitiesList did mount');
-    this.setState(
-      {
-        // posts: 
-      }
-    )
+    this.setState({ posts: citySeed });
   }
 
   displayPosts = posts => {
-    console.log('[PostList] display posts');
-    if (this.props.name) {
-      posts = posts.filter(post => {
-        return post.user.username === this.props.name;
-      })
-    };
     return posts.map(post => {
-      return <Post key={post._id} postData={post} />;
+      return (
+        <City
+          key={Math.random() * 100}
+          name={post.name}
+          descrip={post.descrip}
+          image={post.image}
+        />
+      );
     });
   };
 
   render() {
-    console.log('[PostList] render', this.state)
     return (
-      <section id='post-list'>
-        {this.state.posts.length ? this.displayPosts(this.state.posts) : <p>Loading</p>}
+      <section className="city-container">
+        <div className="city-scroll">
+          {this.state.posts.length ? (
+            this.displayPosts(this.state.posts)
+          ) : (
+              <h1>No Posts Yet!</h1>
+            )}
+        </div>
       </section>
     );
   }
-
-
-  // constructor()
-  // static getDerivedStateFromProps()
-  // shouldComponentUpdate()
-  // componentDidUpdate()
-  // render()
 }
+
+export default CitiesList;

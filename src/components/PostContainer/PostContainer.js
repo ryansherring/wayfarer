@@ -2,13 +2,14 @@ import React from "react";
 import Post from "./Post/Post";
 import ContainerTop from "./ContainerTop/ContainerTop";
 import postSeed from "./postSeed.json";
+import { Container, Header, Grid, GridColumn } from 'semantic-ui-react';
 
 class PostContainer extends React.Component {
   state = {
     posts: [],
     title: "London",
     subtitle: "England",
-    img: "https://i.imgur.com/TyrqyIb.jpg"
+    img: "https://i.imgur.com/q3VDpaP.jpg"
   };
 
   componentDidMount() {
@@ -44,6 +45,7 @@ class PostContainer extends React.Component {
 
   render() {
     return (
+
       <section className="post-container">
         {this.displayTop()}
         <div className="title">
@@ -54,8 +56,8 @@ class PostContainer extends React.Component {
           {this.state.posts.length ? (
             this.displayPosts(this.state.posts)
           ) : (
-            <h1>No Posts Yet!</h1>
-          )}
+              <h1>No Posts Yet!</h1>
+            )}
         </div>
       </section>
     );
