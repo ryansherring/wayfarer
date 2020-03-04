@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Segment } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 
 const Profile = (props) => {
   const date = Date(props.profile.createdAt);
