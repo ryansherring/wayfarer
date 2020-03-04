@@ -18,7 +18,7 @@ class MenuExampleBasic extends Component {
   render = props => {
     const { activeItem } = this.state
     return (
-      <Menu>
+      <Menu inverted>
         <Menu.Item header><Link to='/'>Wayfarer</Link></Menu.Item>
         <Menu.Menu position='right'>
           <div className='ui right aligned category search item'>
@@ -43,7 +43,6 @@ class MenuExampleBasic extends Component {
 
           <Menu.Item
             name='profile'
-            active={activeItem === 'profile'}
             onClick={this.handleItemClick}
           >
             <Link to='/profile'>Profile</Link>
