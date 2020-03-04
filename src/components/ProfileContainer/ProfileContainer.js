@@ -2,6 +2,7 @@ import React from 'react';
 import Profile from '../../components/Profile/Profile';
 import ProfileEditForm from '../../components/ProfileEditForm/ProfileEditForm';
 import Post from '../../components/PostContainer/Post/Post';
+import './ProfileContainer.css';
 
 import { Grid, Button } from 'semantic-ui-react';
 import axios from 'axios';
@@ -46,13 +47,13 @@ class ProfileContainer extends React.Component {
 	}
 
 	displayPosts = posts => {
-    return posts.map(post => {
-      return <Post key={Math.random() * 10000} post={post} />;
-    });
-  };
+		return posts.map(post => {
+			return <Post key={Math.random() * 10000} post={post} />;
+		});
+	};
 
 	render() {
-		return(
+		return (
 			<Grid>
 				<Grid.Row>
 					<Grid.Column width={4}>
@@ -65,14 +66,14 @@ class ProfileContainer extends React.Component {
 					<Grid.Column width={12}>
 						{/* HERE IS WHERE PROFILE POSTS WOULD BE?????? */}
 						<section className="post-container">
-							<h2 style={{ textAlign: 'center'}}>{this.state.profile.name}'s Posts</h2>
+							<h2 style={{ textAlign: 'center' }}>{this.state.profile.name}'s Posts</h2>
 							<div className="post-scroll">
-			          {this.state.posts.length ? (
-			            this.displayPosts(this.state.posts)
-			          ) : (
-			              <h1>No Posts Yet!</h1>
-			            )}
-			        </div>
+								{this.state.posts.length ? (
+									this.displayPosts(this.state.posts)
+								) : (
+										<h1>No Posts Yet!</h1>
+									)}
+							</div>
 						</section>
 					</Grid.Column>
 				</Grid.Row>
