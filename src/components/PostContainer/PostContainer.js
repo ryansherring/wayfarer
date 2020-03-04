@@ -2,7 +2,6 @@ import React from "react";
 import Post from "./Post/Post";
 import ContainerTop from "./ContainerTop/ContainerTop";
 import postSeed from "./postSeed.json";
-import { Container, Header, Grid, GridColumn } from 'semantic-ui-react';
 
 class PostContainer extends React.Component {
   state = {

@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { Container, Header, Grid } from 'semantic-ui-react';
+import React from 'react';
 import City from './City/City';
 import citySeed from './citySeed.json'
 import './CitiesList.css'
