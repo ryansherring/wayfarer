@@ -30,22 +30,12 @@ class PostContainer extends React.Component {
 
   displayPosts = posts => {
     return posts.map(post => {
-      return (
-        <Post
-          key={Math.random() * 10000}
-          title={post.title}
-          date={post.date}
-          content={post.content}
-          user={post.user}
-          img={post.img}
-        />
-      );
+      return <Post key={Math.random() * 10000} post={post} />;
     });
   };
 
   render() {
     return (
-
       <section className="post-container">
         {this.displayTop()}
         <div className="title">
