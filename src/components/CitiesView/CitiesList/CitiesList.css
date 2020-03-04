@@ -1,0 +1,41 @@
+.city-container {
+	/* background-color: salmon; */
+	box-sizing: border-box;
+	height: 1400px;
+	/* padding: 0px 20px; */
+}
+
+.city-scroll {
+	height: 60%;
+	overflow: scroll;
+}
+
+.city-thumbnail {
+	height: 100%;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.city-body {
+	display: flex;
+	flex-direction: column;
+	/* text-align: center; */
+	/* background-color: rgba(0, 0, 0, 0.5); */
+	padding: 5px 10px;
+	margin-left: 10px;
+	width: 100%;
+}
+
+.city-header {
+	display: inline-block;
+	margin: auto;
+	text-align: center;
+	width: 50%;
+	line-height: 150px;
+}
+
+.city-header h3 {
+	/* margin: auto;
+	width: 50%;
+	text-align: center; */
+	/* line-height: 150px; */
+}

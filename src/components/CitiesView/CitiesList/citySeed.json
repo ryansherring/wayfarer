@@ -1,0 +1,82 @@
+[
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d63",
+		"name": "New Orleans",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/d30yttO.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d64",
+		"name": "Paris",
+		"descrip": "France",
+		"image": "https://i.imgur.com/XR7ISGH.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d65",
+		"name": "Paris 2",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/pAPf4CT.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d67",
+		"name": "San Francisco",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/z8eEtTu.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d66",
+		"name": "Miami",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/FZUfe2t.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d68",
+		"name": "New York",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/EezpUBp.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d69",
+		"name": "Portland",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/cmWywNG.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d6a",
+		"name": "London",
+		"descrip": "England",
+		"image": "https://i.imgur.com/q3VDpaP.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d6b",
+		"name": "Dallas",
+		"descrip": "United States",
+		"image": "https://i.imgur.com/O6NbtjK.jpg",
+		"__v": 0
+	},
+	{
+		"posts": [],
+		"_id": "5e5d945b07c778e5076a0d6c",
+		"name": "Tokyo",
+		"descrip": "Japan",
+		"image": "https://i.imgur.com/eEkv3ut.jpg",
+		"__v": 0
+	}
+]
