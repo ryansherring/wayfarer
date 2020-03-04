@@ -10,7 +10,7 @@ const CitiesView = () => {
       <Grid columns={2}>
         <Grid.Column width={6}>
           <Grid.Row>
-            <Header as='h1' inverted>Cities List</Header>
+            <Header as='h1' inverted>Cities</Header>
             <CitiesList />
           </Grid.Row>
         </Grid.Column>
