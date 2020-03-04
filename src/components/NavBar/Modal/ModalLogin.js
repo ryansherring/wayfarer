@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Button, Modal, Form, } from 'semantic-ui-react';
 import axios from 'axios'
-// import { render } from '@testing-library/react';
+import { withRouter } from 'react-router-dom';
 
 
 
@@ -26,6 +26,7 @@ class Login extends Component {
         console.log(res);
         this.close()
         this.props.setCurrentUser(res.data.data)
+        this.props.history.push('/profile');
 
       })
       .catch(err => {
@@ -97,4 +98,4 @@ class Login extends Component {
 
 
 
-export default Login;
+export default withRouter(Login);
