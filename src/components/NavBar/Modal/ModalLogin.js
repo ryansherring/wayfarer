@@ -9,7 +9,7 @@ class Login extends Component {
     state = {
       email: '',
       password: '',
-      show: false
+      show: false,
     };
   
     handleChange = event => {
@@ -34,11 +34,11 @@ class Login extends Component {
     };
 
     open =() => {
-        this.setState({show:true})
+        this.setState({show: true})
     }
 
     close =() => {
-        this.setState({show:false})
+        this.setState({show: false})
     }
 
     render(){
@@ -54,7 +54,7 @@ class Login extends Component {
               <div className='container mt-4'>
                 <div className='row'>
                   <div className='col-md-4 offset-md-4'>
-                    <h4 className='mb-3'>Register</h4>
+                    <h4 className='mb-3'>Log in</h4>
                      <Form onSubmit={this.handleSubmit}>
                         <Form.Field>
                           <label htmlFor='name'>Email</label>
