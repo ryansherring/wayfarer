@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form } from 'semantic-ui-react';
+import { Button, Form, Container } from 'semantic-ui-react';
 import axios from 'axios';
 
 class ProfileEditForm extends React.Component {
@@ -14,13 +14,31 @@ class ProfileEditForm extends React.Component {
 		})
 	}
 
+	handleSubmit = (event) => {
+		event.preventDefault();
+
+		console.log(this.state);
+
+		const userId = localStorage.getItem('uid');
+
+		axios.put(`${process.env.REACT_APP_API_URL}/users/${userId}`, this.state, {withCredentials: true })
+			.then(res => {
+				console.log(res);
+				this.props.toggleEditForm();
+				this.props.setProfileInfo(res.data.data);
+			})
+			.catch(err => {
+				console.log(err.response);
+			});
+	}
+
 	render() {
 		return(
 			<>
-			<p>I am Profile Edit Form</p>
-			<Form onSubmit={this.props.handleSubmit}>
+			<Container style={{ marginTop: '10px'}}>
+			<Form onSubmit={this.handleSubmit}>
 				<Form.Field>
-					<label>Name</label>
+					<label style={{ color: 'white' }}>Name</label>
 					<input 
 						placeholder="Edit Name" 
 						name="name"
@@ -28,7 +46,7 @@ class ProfileEditForm extends React.Component {
 					/>
 				</Form.Field>
 				<Form.Field>
-					<label>Home City</label>
+					<label style={{ color: 'white' }}>Home City</label>
 					<input 
 						placeholder="Edit Home City" 
 						name="homeCity"
@@ -37,6 +55,7 @@ class ProfileEditForm extends React.Component {
 				</Form.Field>
 				<Button type="submit">Submit</Button>
 			</Form>
+			</Container>
 			</>
 		)
 	}
