@@ -2,8 +2,15 @@ import React from 'react';
 import './Home.css'
 import Carousel from 'semantic-ui-carousel-react';
 import { Image, Container, Segment, Header, Grid, Placeholder } from 'semantic-ui-react';
-import neworleans from './new-orleans.jpg';
-import paris from './paris.jpg';
+import neworleans from './Images/neworleans.jpg';
+import paris from './Images/paris.jpg';
+import paris2 from './Images/paris2.jpg';
+import dallas from './Images/dallas.jpg';
+import london from './Images/london.jpg';
+import miami from './Images/miami.jpg';
+import newyork from './Images/newyork.jpg';
+import sanfrancisco from './Images/sanfrancisco.jpg';
+import tokyo from './Images/tokyo.jpg';
 
 
 // TODO place images from the seed file into this folder, and feed them into the carousel.
@@ -30,6 +37,76 @@ const Home = () => {
         ></Image>
       }
     },
+    {
+      render: () => {
+        return <Image
+          src={paris2}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
+    {
+      render: () => {
+        return <Image
+          src={dallas}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
+    {
+      render: () => {
+        return <Image
+          src={london}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
+    {
+      render: () => {
+        return <Image
+          src={miami}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
+    {
+      render: () => {
+        return <Image
+          src={newyork}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
+    {
+      render: () => {
+        return <Image
+          src={sanfrancisco}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
+    {
+      render: () => {
+        return <Image
+          src={tokyo}
+          // size='large'
+          style={{ maxHeight: '400px' }}
+          centered
+        ></Image>
+      }
+    },
   ]
 
   const styles = {
@@ -46,7 +123,7 @@ const Home = () => {
         <Carousel
           style={styles}
           elements={elements}
-          duration={3000}
+          duration={8000}
           animation='slide left'
           showNextPrev={false}
           showIndicators={true}

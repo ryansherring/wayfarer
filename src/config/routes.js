@@ -5,10 +5,12 @@ import Register from "../components/NavBar/Modal/ModalRegister";
 import Login from "../components/NavBar/Modal/ModalLogin";
 import PostContainer from "../components/PostContainer/PostContainer";
 import ProfileContainer from "../components/ProfileContainer/ProfileContainer";
+import CitiesView from "../components/CitiesView/CitiesView";
 
 export default ({ currentUser, setCurrentUser }) => (
   <Switch>
     <Route exact path="/" component={Home} />
+    <Route exact path="/cities" component={CitiesView} />
     <Route
       path="/login"
       render={() => (
