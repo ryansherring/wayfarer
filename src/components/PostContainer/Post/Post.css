@@ -1,8 +1,6 @@
 .post-container {
-  /* background-color: salmon; */
   box-sizing: border-box;
   height: 800px;
-  /* padding: 0px 20px; */
 }
 .container-top {
   display: flex;
@@ -40,7 +38,7 @@
   margin: 10px;
   background-color: rgba(10, 10, 10, 0.8);
   width: 97.5%;
-  height: 150px;
+  height: 100px;
 }
 .post-header {
   display: flex;
@@ -58,4 +56,11 @@
   /* background-color: rgba(0, 0, 0, 0.5); */
   padding: 5px 10px;
   margin-left: 10px;
+  width: 200px;
+}
+.post-body p {
+  width: 200%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
