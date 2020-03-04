@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Container, Header, Grid, GridColumn } from 'semantic-ui-react';
+import React from 'react';
+import { Header, Grid } from 'semantic-ui-react';
 import PostContainer from '../PostContainer/PostContainer';
 import CitiesList from './CitiesList/CitiesList'
 import './CitiesView.css'
