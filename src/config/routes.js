@@ -6,6 +6,7 @@ import Login from "../components/NavBar/Modal/ModalLogin";
 import PostContainer from "../components/PostContainer/PostContainer";
 import ProfileContainer from "../components/ProfileContainer/ProfileContainer";
 import CitiesView from "../components/CitiesView/CitiesView";
+import PostDetail from "../components/PostDetail/PostDetail";
 
 export default ({ currentUser, setCurrentUser }) => (
   <Switch>
@@ -19,5 +20,6 @@ export default ({ currentUser, setCurrentUser }) => (
     />
     <Route exact path="/postcontainer" component={PostContainer} />
     <Route path="/profile" component={ProfileContainer} />
+    <Route path="/posts/:id" component={PostDetail} />
   </Switch>
 );
