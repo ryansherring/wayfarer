@@ -18,7 +18,23 @@
   overflow: hidden;
 }
 .post-detail-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   width: 100%;
+}
+.post-detail-modify {
+  display: flex;
+
+  margin: 0px 0px 2.5px;
+}
+.post-detail-modify h4 {
+  margin: 0px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.post-detail-title {
+  margin: 0px;
 }
 .post-detail-img {
   width: 100%;
@@ -42,7 +58,9 @@
   text-align: right;
   cursor: pointer;
 }
-
+.confirm-modal {
+  max-width: 400px;
+}
 @media (max-width: 600px) {
   .post-detail {
     width: 95%;
