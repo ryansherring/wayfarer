@@ -12,7 +12,7 @@ class PostContainer extends React.Component {
   };
 
   componentDidUpdate() {
-    console.log(this.props.selectedCity)
+    // console.log(this.props.selectedCity)
   }
 
   componentDidMount() {
@@ -30,10 +30,11 @@ class PostContainer extends React.Component {
       />
     );
   }
-
+  // TODO Update displayPosts() to pass the City ID from Cities to search for the posts that match the City ID.
   // TODO update displayPosts() to filter the posts by city.
   // The return posts do not have a city property.
   // TODO how do I get the posts from the city?
+
   displayPosts = posts => {
     return posts.map(post => {
       console.log(post);
