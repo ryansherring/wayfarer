@@ -23,6 +23,7 @@ class CitiesList extends React.Component {
           name={post.name}
           descrip={post.descrip}
           image={post.image}
+          handleSelectCity={this.props.handleSelectCity}
         />
       );
     });

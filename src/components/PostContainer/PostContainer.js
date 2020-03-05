@@ -10,7 +10,10 @@ class PostContainer extends React.Component {
     subtitle: "England",
     img: "https://i.imgur.com/q3VDpaP.jpg"
   };
-  //TODO update State with props from CityList active state
+
+  componentDidUpdate() {
+    console.log(this.props.selectedCity)
+  }
 
   componentDidMount() {
     console.log("PostContainer Mounted");
@@ -28,9 +31,13 @@ class PostContainer extends React.Component {
     );
   }
 
+  // TODO update displayPosts() to filter the posts by city.
+  // The return posts do not have a city property.
+  // TODO how do I get the posts from the city?
   displayPosts = posts => {
     return posts.map(post => {
-      return <Post key={Math.random() * 10000} post={post} />;
+      console.log(post);
+      return <Post key={Math.random() * 10000} post={post} />
     });
   };
 
