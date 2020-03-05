@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192px" height="47px" viewBox="0 0 192 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 59.1 (86144) - https://sketch.com -->
+    <title>Wayfarer Logo Unflattened</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F5F1F1" offset="0%"></stop>
+            <stop stop-color="#898989" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-28.000000, -186.000000)">
+            <g id="Wayfarer-Logo-Unflattened" transform="translate(28.000000, 177.000000)">
+                <text id="Wa-farer" font-family="LiberationSerif-Bold, Liberation Serif" font-size="54" font-weight="bold" line-spacing="54" letter-spacing="-9" fill="#FFFFFF">
+                    <tspan x="0" y="48">W</tspan>
+                    <tspan x="45" y="48">a </tspan>
+                    <tspan x="85.5" y="48" letter-spacing="-3.1">f</tspan>
+                    <tspan x="100.382422" y="48" letter-spacing="-1.6">a</tspan>
+                    <tspan x="125.782422" y="48" letter-spacing="-1.5">r</tspan>
+                    <tspan x="147.274609" y="48" letter-spacing="-1.3">e</tspan>
+                    <tspan x="169.942383" y="48">r</tspan>
+                </text>
+                <g id="Martini-Glass" transform="translate(64.000000, 9.000000)">
+                    <polygon id="Triangle" fill="url(#linearGradient-1)" transform="translate(13.000000, 11.500000) scale(1, -1) translate(-13.000000, -11.500000) " points="14.5 1 22 22 4 22"></polygon>
+                    <circle id="Oval" stroke="#979797" stroke-width="0.5" cx="10" cy="5" r="1"></circle>
+                    <circle id="Oval" stroke="#979797" stroke-width="0.5" cx="15" cy="3" r="1"></circle>
+                    <circle id="Oval" stroke="#BCBCBC" stroke-width="0.5" cx="13" cy="12" r="1"></circle>
+                    <circle id="Oval" stroke="#A2A2A2" stroke-width="0.5" cx="18" cy="7" r="1"></circle>
+                    <path d="M12,26.5 L1.74023437,2.58789063 L-1.77635684e-15,1.95507813 L-1.77635684e-15,0.21484375 L4.97265625,0 L13.9726562,21 L21.8505859,0.21484375 L25.9453125,0.21484375 L25.9453125,1.95507813 L24.1523437,2.48242188 L16,26.5 L16,45 C20.3333333,46 21.5,46.5 19.5,46.5 C17.5,46.5 16.3333333,46.5 16,46.5 L12,46.5 C10.3333333,46.5 8.83333333,46.5 7.5,46.5 C6.16666667,46.5 7.66666667,46 12,45 C11.8463729,33.0088362 11.8463729,26.8421695 12,26.5 Z" id="y" fill="#FFFFFF" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

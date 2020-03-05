@@ -10,6 +10,7 @@ class PostContainer extends React.Component {
     subtitle: "England",
     img: "https://i.imgur.com/q3VDpaP.jpg"
   };
+  //TODO update State with props from CityList active state
 
   componentDidMount() {
     console.log("PostContainer Mounted");

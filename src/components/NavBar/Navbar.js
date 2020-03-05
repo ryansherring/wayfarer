@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import { Menu } from 'semantic-ui-react';
+import { Menu, Image } from 'semantic-ui-react';
 import Register from './Modal/ModalRegister';
 import Login from './Modal/ModalLogin';
+import logo from './Wayfarer-Logo.svg';
 // import App from '../../App'
 
 
@@ -19,7 +20,12 @@ class MenuExampleBasic extends Component {
     const { activeItem } = this.state
     return (
       <Menu inverted>
-        <Menu.Item header><Link to='/'>Wayfarer</Link></Menu.Item>
+        <Menu.Item header>
+          <Image
+            src={logo}
+            as='a'
+            size='small'
+            href='/'></Image></Menu.Item>
         <Menu.Menu position='right'>
 
           {this.props.currentUser ? (
