@@ -24,4 +24,4 @@ const CitiesView = () => {
   )
 }
 
-export default CitiesView
+export default CitiesView;
