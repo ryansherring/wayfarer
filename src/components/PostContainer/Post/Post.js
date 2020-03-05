@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Post.css";
 
+
 const Post = props => {
   const { _id, img, title, content } = props.post;
   return (

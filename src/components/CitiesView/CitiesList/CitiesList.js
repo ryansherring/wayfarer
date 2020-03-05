@@ -3,7 +3,7 @@ import City from './City/City';
 import citySeed from './citySeed.json'
 import './CitiesList.css'
 
-
+// TODO create activeCity state and pass that into the Cities View Container
 class CitiesList extends React.Component {
   state = {
     posts: [],
@@ -23,6 +23,7 @@ class CitiesList extends React.Component {
           name={post.name}
           descrip={post.descrip}
           image={post.image}
+          handleSelectCity={this.props.handleSelectCity}
         />
       );
     });
