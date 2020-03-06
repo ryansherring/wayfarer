@@ -2,6 +2,7 @@ import React from "react";
 import Post from "./Post/Post";
 import ContainerTop from "./ContainerTop/ContainerTop";
 import postSeed from "./postSeed.json";
+import axios from 'axios';
 
 class PostContainer extends React.Component {
   state = {
@@ -12,7 +13,8 @@ class PostContainer extends React.Component {
   };
 
   componentDidUpdate() {
-    console.log(this.props.selectedCity)
+    console.log("PostContainer Updated");
+    this.filterPosts(this.props.selectedCity)
   }
 
   componentDidMount() {
@@ -32,8 +34,12 @@ class PostContainer extends React.Component {
   }
 
   // TODO update displayPosts() to filter the posts by city.
-  // The return posts do not have a city property.
-  // TODO how do I get the posts from the city?
+  // TODO update filterPosts to make an axios call to filter the posts by city or user
+
+  filterPosts = city => {
+    console.log(city);
+  }
+
   displayPosts = posts => {
     return posts.map(post => {
       console.log(post);

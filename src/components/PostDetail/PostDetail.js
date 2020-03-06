@@ -1,4 +1,4 @@
-import React from "react";
+1import React from "react";
 import API from "../PostContainer/postSeed.json";
 import { Modal } from "semantic-ui-react";
 import ModalBasicExample from "./ConfirmModal/ConfirmModal";
