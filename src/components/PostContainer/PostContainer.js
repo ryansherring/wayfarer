@@ -2,6 +2,7 @@ import React from "react";
 import Post from "./Post/Post";
 import ContainerTop from "./ContainerTop/ContainerTop";
 import postSeed from "./postSeed.json";
+import axios from "axios";
 
 class PostContainer extends React.Component {
   state = {
@@ -11,13 +12,28 @@ class PostContainer extends React.Component {
     img: "https://i.imgur.com/q3VDpaP.jpg"
   };
 
+  getPosts = () => {
+    axios
+      .get(`${process.env.REACT_APP_API_URL}/posts`, { withCredentials: true })
+      .then(res => {
+        console.log(`axios response`, res);
+        this.setState({
+          posts: res.data.resObj.data
+        });
+        console.log(`state.posts:`, this.state.posts);
+      })
+      .catch(err => {
+        console.log(err.response);
+      });
+  };
+
   componentDidUpdate() {
-    console.log(this.props.selectedCity)
+    console.log(this.props.selectedCity);
   }
 
   componentDidMount() {
     console.log("PostContainer Mounted");
-    this.setState({ posts: postSeed });
+    this.getPosts();
   }
 
   displayTop() {
@@ -37,7 +53,7 @@ class PostContainer extends React.Component {
   displayPosts = posts => {
     return posts.map(post => {
       console.log(post);
-      return <Post key={Math.random() * 10000} post={post} />
+      return <Post key={Math.random() * 10000} post={post} />;
     });
   };
 
@@ -53,8 +69,8 @@ class PostContainer extends React.Component {
           {this.state.posts.length ? (
             this.displayPosts(this.state.posts)
           ) : (
-              <h1>No Posts Yet!</h1>
-            )}
+            <h1>No Posts Yet!</h1>
+          )}
         </div>
       </section>
     );
