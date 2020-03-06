@@ -45,16 +45,6 @@ class PostDetail extends React.Component {
     }
   }
   render() {
-    // console.log({ PDprops: this.props });
-
-    // const postToShow = this.state.posts.filter(
-    //   post => post._id === this.props.match.params.id
-    // );
-
-    // console.log(postToShow[0]._id);
-    // console.log(this.props.match.params.id);
-
-    // const { title, date, content, user, img } = this.state.post;
     return (
       this.state.post && (
         <>

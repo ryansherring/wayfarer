@@ -11,7 +11,6 @@ class CitiesList extends React.Component {
   }
 
   componentDidMount() {
-    console.log('CitiesList did mount');
     this.setState({ posts: citySeed });
   }
 

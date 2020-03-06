@@ -22,7 +22,7 @@ class Register extends Component {
 
   handleSubmit = event => {
     event.preventDefault()
-    console.log(this.state)
+    // console.log(this.state)
     axios.post(`${process.env.REACT_APP_API_URL}/signup`, this.state)
       .then(res => {
         console.log(res);

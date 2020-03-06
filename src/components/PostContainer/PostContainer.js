@@ -15,11 +15,9 @@ class PostContainer extends React.Component {
     axios
       .get(`${process.env.REACT_APP_API_URL}/posts`, { withCredentials: true })
       .then(res => {
-        console.log(`axios response`, res);
         this.setState({
           posts: res.data.resObj.data
         });
-        console.log(`state.posts:`, this.state.posts);
       })
       .catch(err => {
         console.log(err.response);
@@ -31,7 +29,6 @@ class PostContainer extends React.Component {
   }
 
   componentDidMount() {
-    console.log("PostContainer Mounted");
     this.getPosts();
   }
 
@@ -50,12 +47,11 @@ class PostContainer extends React.Component {
   // TODO update filterPosts to make an axios call to filter the posts by city or user
 
   filterPosts = city => {
-    console.log(city);
+    // console.log(city);
   }
 
   displayPosts = posts => {
     return posts.map(post => {
-      console.log(post);
       return <Post key={Math.random() * 10000} post={post} />;
     });
   };

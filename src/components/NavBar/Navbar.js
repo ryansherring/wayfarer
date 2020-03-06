@@ -16,7 +16,6 @@ class MenuExampleBasic extends Component {
   handleItemClick = (e, props) => this.setState({ activeItem: props.name })
 
   render = props => {
-    console.log(this.props)
     const { activeItem } = this.state
     return (
       <Menu inverted>
